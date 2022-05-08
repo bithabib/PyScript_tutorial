@@ -1,4 +1,4 @@
-# PyScript_tutorial
+# PyScript Tutorial
 
 ### Important links
 
