@@ -254,3 +254,20 @@ print(random_number())
 
 </html>
 ```
+### Python file our_script.py
+```py
+def my_function(*args, **kwargs):
+    test_number = Element("test-input").element.value
+    if int(test_number)%2==0:
+        Element("test-output").element.innerHTML = "Even"
+    else:
+        Element("test-output").element.innerHTML = "Odd"
+
+```
+### Python file random_n.py
+```py
+import random
+
+def random_number():
+    return random.randint(1, 10)
+```
