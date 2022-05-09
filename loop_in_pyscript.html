@@ -3,20 +3,25 @@
 
 <head>
     <!-- <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-
 </head>
 
 <body>
-
-    <h1>My First Heading</h1>
-    <p>My first paragraph.</p>
-
-    <!-- Magic is here! -->
-    <py-script> print('Hello, World!') </py-script>
-    <py-script> print('Hello, World!') </py-script>
-    <py-script> print('Hello, World!') </py-script>
-
+    <div class="container text-center p-5">
+        <h1>Input and Output</h1>
+        <input type="number" id="test-input"/> 
+        <button id="test-button" pys-onclick="my_function">Click me</button>
+        <div id="test-output" class="p-3"></div>
+        <py-script>
+from js import console
+def my_function(*args, **kwargs):
+    test_number = Element("test-input").element.value
+    for i in range(int(test_number)):
+        console.log("hello ",i)
+        </py-script>
+    </div>
 </body>
 
 </html>
