@@ -287,7 +287,9 @@ def create(*args, **kwargs):
     
 
 def insert(*args, **kwargs):
-    conn.execute("INSERT INTO items (ietm_name, quantity) VALUES ('item1', 10)")
+    item = Element('item').element.value
+    quantity = Element('quantity').element.value
+    conn.execute("INSERT INTO items (ietm_name, quantity) VALUES ('{}', {})".format(item, quantity))
     console.log("Inserting data...")
 
 def fetch(*args, **kwargs):
