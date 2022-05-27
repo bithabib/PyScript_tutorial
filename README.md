@@ -273,6 +273,7 @@ def random_number():
     return random.randint(1, 10)
 ```
 
+## 9. Database using Pyscript
 ```py
 import sqlite3
 from js import console
